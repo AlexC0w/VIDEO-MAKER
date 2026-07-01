@@ -1,54 +1,52 @@
-# Remotion video
+# Octane Video Maker
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Proyecto Remotion para generar videos animados con React, TypeScript y Tailwind.
 
-Welcome to your Remotion project!
+Incluye una plantilla visual con:
 
-## Commands
+- Formato vertical `1080x1920` para Reels, Shorts y TikTok.
+- Formato horizontal `1920x1080` para YouTube y promos.
+- Intro con kinetic typography, glitch, flashes y fondo animado.
+- Escenas reutilizables basadas en datos.
+- Transiciones por corte y salida tipo CTA.
 
-**Install Dependencies**
+## Comandos
 
 ```console
-npm i
-```
-
-**Start Preview**
-
-```console
+npm install
 npm run dev
 ```
 
-**Render video**
+Render vertical:
 
 ```console
-npx remotion render
+npm run render:vertical
 ```
 
-**Upgrade Remotion**
+Render horizontal:
 
 ```console
-npx remotion upgrade
+npm run render:horizontal
 ```
 
-## Docs
+Validar TypeScript y ESLint:
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+```console
+npm run lint
+```
 
-## Help
+## Editar el video
 
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
+La plantilla vive en `src/Composition.tsx`. Cambia el objeto `videoData` para generar otra version:
 
-## Issues
+- `brand`: nombre de marca o proyecto.
+- `hook`: frase principal del inicio.
+- `subHook`: texto secundario.
+- `stats`: etiquetas del intro.
+- `scenes`: bloques animados del video.
+- `cta`: cierre final.
 
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
+Las composiciones registradas estan en `src/Root.tsx`:
 
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+- `OctaneVertical`
+- `OctaneHorizontal`

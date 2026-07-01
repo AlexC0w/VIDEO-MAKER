@@ -1,16 +1,17 @@
 {
   "name": "videomaker-project",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Remotion video maker — Octane / Vesto brand videos + video-use overlay engine",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.427",
+    "@remotion/tailwind-v4": "4.0.427",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-icons": "^5.6.0",
     "remotion": "4.0.427",
-    "@remotion/tailwind-v4": "4.0.427",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
@@ -24,6 +25,11 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "render:vertical": "remotion render OctaneVertical out/octane-vertical.mp4",
+    "render:horizontal": "remotion render OctaneHorizontal out/octane-horizontal.mp4",
+    "render:overlay:h": "remotion render OverlayHorizontal out/overlay-horizontal.webm --codec=vp8",
+    "render:overlay:v": "remotion render OverlayVertical out/overlay-vertical.webm --codec=vp8",
+    "overlay": "node scripts/render-overlay.js",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
